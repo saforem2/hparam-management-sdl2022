@@ -105,7 +105,7 @@ note: MOTIVATIONS
 
 	- **ThetaGPU**:
 	  ```
-	  qsub -A SDL_WORKSHOP -q "default" \
+	  qsub -A SDL_Workshop -q 'training-gpu' \
 		  -n=1 \
 		  -t=01:00 \
 		  --attrs="filesystems=home,eagle,grand,theta-fs0" \
@@ -563,7 +563,7 @@ _W&amp;B is the machine learning platform for developers to build better models 
 .callout-title {
   display: flex;
   text-align:left;
-  color: #f8f8f8;
+  color: var(--callout-color);
   padding-left:10px;
   gap: 10px;
   font-size:1em;
