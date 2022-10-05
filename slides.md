@@ -1,5 +1,5 @@
 ---
-title: 'Data Science on Polaris'
+title: 'Hyperparameter Management'
 center: false
 width: 960
 height: 540
@@ -7,12 +7,9 @@ transition: slide
 background: #1c1c1c
 preloadIframes: false
 highlightTheme: 'monokai'
-keyboardCondition: 'focused'
 maxScale: 20.0
 css:
  - ./css/local.css
-date created: Monday, May 16th 2022, 7:07:14 am
-date modified: Wednesday, September 21st 2022, 9:18:51 pm
 ---
 
 <!-- .slide bg="#1c1c1c" -->
@@ -29,7 +26,7 @@ date modified: Wednesday, September 21st 2022, 9:18:51 pm
 
 <a href="https://www.samforeman.me"><i class="fas fa-home fa-1x" alt="`fas:Home`" /></a> Sam Foreman <!-- .element style="color:#505050;" -->
 
-<span style="font-size:0.9em; color:#505050; padding:0px; margin:0px; text-align:center!important;">2022-09-28
+<span style="font-size:0.9em; color:#505050; padding:0px; margin:0px; text-align:center!important;">2022-10-05
 </grid>
 
 <grid drag="100 20" drop="bottom" align="bottomright" >
@@ -39,7 +36,7 @@ date modified: Wednesday, September 21st 2022, 9:18:51 pm
 
 ---
 
-<!-- .slide template="[[template]]" style="text-align:left;" -->
+<!-- .slide template="[[template]]" bg="#1C1C1C" style="text-align:left;" -->
 
 # Overview
 
@@ -196,7 +193,7 @@ note: MOTIVATIONS
 
 <!-- .slide template="[[template]]" bg="#1c1c1c" -->
 
-## Using Configs
+# Using Configs
 
 - ⚙️ `./conf/config.yaml`:
   ```
@@ -219,10 +216,9 @@ note: MOTIVATIONS
 	main()
   ```
 
-
 ---
 
-<!-- .slide template="[[template]]" align:left!important;" -->
+<!-- .slide template="[[template]]" bg="#1c1c1c" -->
 
 ![WandB|450](https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png) <!-- .element align="top" -->
 
@@ -238,7 +234,7 @@ _W&amp;B is the machine learning platform for developers to build better models 
 
 ---
 
-<!-- .slide template="[[template]]" align:left!important;" -->
+<!-- .slide template="[[template]]" bg="#1C1C1C" -->
 
 <grid drag="25 25" drop="24 22" align="topleft">
 
@@ -265,7 +261,7 @@ _W&amp;B is the machine learning platform for developers to build better models 
 
 ---
 
-<!-- .slide template="[[template]]" align:left!important;" -->
+<!-- .slide template="[[template]]" bg="#1c1c1c" -->
 
 <grid drag="20 15" drop="topleft">
 
@@ -274,30 +270,30 @@ _W&amp;B is the machine learning platform for developers to build better models 
 
 <grid drag="100 70" drop="center" flow="row">
 
-<img src="./assets/wandb-batch-loss.svg" align="left" width=40%>
-<img src="./assets/wandb-batch-acc.svg" align="right" width=40%>
+<img src="https://raw.githubusercontent.com/saforem2/hparam-management-sdl2022/d7030ddca755422ad551211d79e0e1c3028e84c6/docs/assets/wandb-batch-loss.svg" align="left" width=45%>
+<img src="https://raw.githubusercontent.com/saforem2/hparam-management-sdl2022/d7030ddca755422ad551211d79e0e1c3028e84c6/docs/assets/wandb-batch-acc.svg" align="right" width=45%>
 </grid>
 
 ---
 
-<!-- .slide template="[[template]]" align:left!important;" -->
+<!-- .slide template="[[template]]" bg="#1c1c1c" -->
 
 <grid drag="20 15" drop="5 3">
 
 ![WandB](https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png) <!-- .element align="topleft" -->
 </grid>
 
-<img src="./assets/wbsweep.svg" width=90%>
+<img src="https://raw.githubusercontent.com/saforem2/hparam-management-sdl2022/d7030ddca755422ad551211d79e0e1c3028e84c6/docs/assets/wbsweep.svg" width=90%>
 
 ---
 
-<!-- .slide bg="#1c1c1c" align:left!important;" style="height:100%!important;" -->
+<!-- .slide bg="#1c1c1c" style="height:100%!important;" bg="#1c1c1c;" -->
 
 <iframe width=100% height=100% data-src="https://wandb.ai/alcf-mlops/sdl_workshop-hyperparameterManagement_src_hplib/reports/Sweep-Report--VmlldzoyNzQ0ODEz" data-background-interactive style="border:none;">
 
 ---
 
-<!-- .slide bg="#1c1c1c" align:left!important;" style="height:100%!important;" -->
+<!-- .slide bg="#1c1c1c" style="height:100%!important;" -->
 
 <iframe width=100% height=100% data-src="https://wandb.ai/timssweeney/keras_learning_rate/reports/Announcing-W-B-Weave-Plot-Beta---VmlldzoxMDIyODM1" data-background-interactive style="border:none;">
 
