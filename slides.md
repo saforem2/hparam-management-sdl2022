@@ -293,7 +293,39 @@ _W&amp;B is the machine learning platform for developers to build better models 
 
 <!-- .slide bg="#1c1c1c" align:left!important;" style="height:100%!important;" -->
 
-<iframe width=100% height=100% data-src="https://wandb.ai/alcf-mlops/sdl_workshop-hyperparameterManagement_src_hplib/reports/Sweep-Report--VmlldzoyNzQ0ODEz" data-background-interactive style="border:none;"></section>
+<iframe width=100% height=100% data-src="https://wandb.ai/alcf-mlops/sdl_workshop-hyperparameterManagement_src_hplib/reports/Sweep-Report--VmlldzoyNzQ0ODEz" data-background-interactive style="border:none;">
+
+---
+
+<!-- .slide bg="#1c1c1c" align:left!important;" style="height:100%!important;" -->
+
+<iframe width=100% height=100% data-src="https://wandb.ai/timssweeney/keras_learning_rate/reports/Announcing-W-B-Weave-Plot-Beta---VmlldzoxMDIyODM1" data-background-interactive style="border:none;">
+
+---
+
+<!-- .slide template="[[template]]" bg="#1c1c1c" -->
+
+# MLOps
+
+- There are many other / similar tools:
+	- [DeepHyper](https://deephyper.readthedocs.io/)
+	- [TensorBoard](https://www.tensorflow.org/tensorboard)
+	- [Aim](https://aimstack.readthedocs.io/en/latest/)
+	- [ZenML](https://zenml.io/home)
+	- [Sacred](https://github.com/IDSIA/sacred)
+	- [MLFlow](https://mlflow.org/)
+	- [Determined.ai](https://determined.ai)
+
+- **Rapidly** growing area!
+	- [_Weights and Biases Raises $135m to Continue Building Our Developer-First MLOps Platform_](https://wandb.ai/wandb/getting-started/reports/Weights-and-Biases-Raises-135m-to-Continue-Building-Our-Developer-First-MLOps-Platform--VmlldzoxMTEzNDI5)
+	- [_Our Growing Partnership with NVIDIA_](https://wandb.ai/wandb/wb-announcements/reports/Our-Growing-Partnership-with-NVIDIA--VmlldzoyMDIwMDI4)
+	- [Open source MLOps framework ZenML raises $2.7M](https://venturebeat.com/business/open-source-mlops-framework-zenml-raises-2-7m/)
+
+---
+
+<!-- .slide bg="#1c1c1c" align:left!important;" style="height:100%!important;" -->
+
+<iframe width=100% height=100% data-src="https://mlops.toys" data-background-interactive style="border:none;">
 
 ---
 
@@ -319,8 +351,6 @@ _W&amp;B is the machine learning platform for developers to build better models 
 > [!quote] Acknowledgements
 > This research used resources of the Argonne Leadership Computing Facility, which is a DOE Office of Science User Facility supported under Contract DE-AC02-06CH11357.
 <!-- .element style="max-width:90%;" -->
-
-
 
 ---
 
