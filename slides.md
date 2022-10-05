@@ -116,26 +116,29 @@ note: MOTIVATIONS
 
 <!-- .slide template="[[template]]" bg="#1c1c1c" style="text-align:center!important;"-->
 
-<img src="https://hydra.cc/img/logo.svg" width="10%" display="inline-block" style="margin-top:-8px; padding-right:5px;" align="center" ><a href="https://hydra.cc"><span style="line-height:2em; vertical-align:baseline; font-size:2.0em; font-weight:700; border-bottom: 2px solid #7AA5BC; color:#f5f6f7;">Hydra</span></a>
+<img src="https://hydra.cc/img/logo.svg" width="10%" display="inline-block" style="margin-top:-8px; padding-right:5px;" align="center" ><a href="https://hydra.cc"><span style="line-height:2em; vertical-align:baseline; font-size:2.0em; font-weight:600; border-bottom: 4px solid #7AA5BC; color:#f5f6f7; text-align:left;">Hydra</span></a>
 
-<span style="color:#7AA5BC; text-align:right;"> _A framework for elegantly configuring complex applications_</span>
+<span style="color:#7AA5BC; text-align:right; text-wrap:tight;"> _A framework for elegantly configuring complex applications_</span>
 
-<grid drop="0 60" drag="100 20" align="left">
+<grid drop="4 60" drag="60 20" align="center">
 
 <split even>
 
-**No boilerplate** <!-- .element class="standout" style="background:#7AA5BC; color:#303030;" -->
-**Powerful Configuration** <!-- .element class="standout" style="background:#7AA5BC; color:#303030;" -->
-**Pluggable Architecture** <!-- .element class="standout" style="background:#7AA5BC; color:#303030;" -->
+**Powerful Configuration** <!-- .element class="standout" style="background:#7AA5BC; color:#303030; font-size:0.8em;" -->
+**No boilerplate** <!-- .element class="standout" style="background:#7AA5BC; color:#303030; font-size:0.8em;" -->
+**Pluggable Architecture** <!-- .element class="standout" style="background:#7AA5BC; color:#303030; font-size:0.8em;" -->
 </split>
 </grid>
+
+:::
 
 
 ---
 
 <!-- .slide template="[[template]]" bg="#1c1c1c" -->
 
-<img src="https://hydra.cc/img/logo.svg" width="15%" display="inline-block" style="margin-top:-8px; padding-right:5px;" align="center" ><a href="https://hydra.cc"><span style="line-height:2.5em; vertical-align:baseline; padding-top:20px; font-size:2.0em; font-weight:700; border-bottom: 2px solid #7AA5BC; color:#EFEFEF;">Hydra</span></a>
+<img src="https://hydra.cc/img/logo.svg" width="10%" display="inline-block" style="margin-top:-8px; padding-right:5px;" align="center" ><a href="https://hydra.cc"><span style="line-height:2em; vertical-align:baseline; font-size:2.0em; font-weight:600; border-bottom: 4px solid #7AA5BC; color:#f5f6f7;">Hydra</span></a>
+
 - Key Features:
 	- Hierarchical configuration composable from multiple sources
 	- Configuration can be specified **or overridden** from the command line
@@ -237,7 +240,7 @@ _W&amp;B is the machine learning platform for developers to build better models 
 
 <!-- .slide template="[[template]]" align:left!important;" -->
 
-<grid drag="20 25" drop="bottomleft">
+<grid drag="25 25" drop="24 22" align="topleft">
 
 ![WandB|250](https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png) <!-- .element align="topleft" -->
 </grid>
@@ -279,7 +282,7 @@ _W&amp;B is the machine learning platform for developers to build better models 
 
 <!-- .slide template="[[template]]" align:left!important;" -->
 
-<grid drag="20 15" drop="topleft">
+<grid drag="20 15" drop="5 3">
 
 ![WandB](https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png) <!-- .element align="topleft" -->
 </grid>
@@ -293,6 +296,34 @@ _W&amp;B is the machine learning platform for developers to build better models 
 <iframe width=100% height=100% data-src="https://wandb.ai/alcf-mlops/sdl_workshop-hyperparameterManagement_src_hplib/reports/Sweep-Report--VmlldzoyNzQ0ODEz" data-background-interactive style="border:none;"></section>
 
 ---
+
+<!-- .slide template="[[template]]" bg="#1c1c1c" -->
+
+# Thank you!
+
+- Organizers
+- ALCF Data Science & Operations
+
+- Feel free to reach out!
+
+<br>
+
+<grid drop="13 37" drag="60 20">
+
+[<i class="fas fa-home"></i>](https://samforeman.me) <!-- .element style="padding-right:17px; font-size:1.2em;" -->
+[<i class="far fa-paper-plane"></i>](mailto:///foremans@anl.gov) <!-- .element style="padding-left:17px; padding-right:17px; font-size:1.2em;" -->
+[<i class="fab fa-twitter"></i>](https://www.twitter.com/saforem2) <!-- .element style="padding-left:17px; padding-right:17px; font-size:1.2em;" -->
+</grid>
+
+
+> [!quote] Acknowledgements
+> This research used resources of the Argonne Leadership Computing Facility, which is a DOE Office of Science User Facility supported under Contract DE-AC02-06CH11357.
+<!-- .element style="max-width:90%;" -->
+
+
+
+---
+
 
 <style>
 
