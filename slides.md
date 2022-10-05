@@ -348,7 +348,7 @@ _W&amp;B is the machine learning platform for developers to build better models 
 </grid>
 
 
-> [!quote] Acknowledgements
+> [!info] Acknowledgements
 > This research used resources of the Argonne Leadership Computing Facility, which is a DOE Office of Science User Facility supported under Contract DE-AC02-06CH11357.
 <!-- .element style="max-width:90%;" -->
 
