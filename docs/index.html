@@ -137,13 +137,60 @@
 	  ```
 
 
+
+
 </div>
 
 <div class="" style="position: absolute; left: 0%; top: 92%; height: 8%; width: 100%; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end" align="right">
 
 <img src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/Argonne_cmyk_white.svg" alt="Argonne National Laboratory">
 </div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" 100%;text-align:left;line-height:1.5em;"="true" -->
+</div>
+
+<aside class="notes"><p>MOTIVATIONS</p>
+<ul>
+<li><p>Motivate need for experiment management</p>
+<ul>
+<li>Running experiments</li>
+<li>Consistent locations</li>
+</ul>
+</li>
+<li><p>CPU Only?</p>
+</li>
+<li><p><code>1</code> GPU?</p>
+</li>
+<li><p><code>&gt;1</code> GPU?</p>
+<ul>
+<li>Independent workers or communication?<ul>
+<li>How do you handle communication?</li>
+</ul>
+</li>
+<li>Do you use distributed training?<ul>
+<li>Specific software / framework?</li>
+<li>How do you launch your application?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>How do you specify the details / configuration of the experiment?</p>
+<ul>
+<li>Directly from the commandline? (<code>sys.argv</code>, <code>ArgumentParser()</code>, etc.)</li>
+<li>Environment variables?</li>
+<li>Configuration files?</li>
+<li>Additional software / Libraries?</li>
+<li>How do you ensure the options you specify are the ones being used?</li>
+</ul>
+</li>
+<li><p>How do you measure model performance?</p>
+<ul>
+<li>Manually?</li>
+<li>Other software?</li>
+<li>How do you keep track of changes to the experiment?</li>
+<li>Aggregation tools?</li>
+</ul>
+</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" 100%;text-align:left;line-height:1.5em;"="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 <div class="" style="border-left: 0px solid #00CCFF; top: 0!important; width: 98%!important; text-align: left; margin: auto; padding: auto; padding-left: 2%" drag="100 100">
@@ -188,76 +235,20 @@
 
 
 
-<!-- .slide: class="has-dark-background" data-background-color="#1c1c1c" -->
-
-- Motivate need for experiment management
-	- Running experiments
-	- Consistent locations
-- CPU Only?
-- `1` GPU?
-- `>1` GPU?
-	- Independent workers or communication?
-		- How do you handle communication?
-	- Do you use distributed training?
-		- Specific software / framework?
-		- How do you launch your application?
-
-
-</div>
-
-<div class="" style="position: absolute; left: 0%; top: 92%; height: 8%; width: 100%; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end" align="right">
-
-<img src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/Argonne_cmyk_white.svg" alt="Argonne National Laboratory">
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" 100%;text-align:left;line-height:1.5em;"="true" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-<div class="" style="border-left: 0px solid #00CCFF; top: 0!important; width: 98%!important; text-align: left; margin: auto; padding: auto; padding-left: 2%" drag="100 100">
-
-
-
-<!-- .slide: class="has-dark-background" data-background-color="#1c1c1c" -->
-
-- How do you specify the details / configuration of the experiment?
-	- Directly from the commandline? (`sys.argv`, `ArgumentParser()`, etc.)
-	- Environment variables?
-	- Configuration files?
-	- Additional software / Libraries?
-	- How do you ensure the options you specify are the ones being used?
-- How do you measure model performance?
-	- Manually?
-	- Other software?
-	- How do you keep track of changes to the experiment?
-	- Aggregation tools?
-
-
-</div>
-
-<div class="" style="position: absolute; left: 0%; top: 92%; height: 8%; width: 100%; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end" align="right">
-
-<img src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/Argonne_cmyk_white.svg" alt="Argonne National Laboratory">
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" 100%;text-align:left;line-height:1.5em;"="true" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-<div class="" style="border-left: 0px solid #00CCFF; top: 0!important; width: 98%!important; text-align: left; margin: auto; padding: auto; padding-left: 2%" drag="100 100">
-
-
-
-<!-- .slide: class="has-dark-background" data-background-color="#1c1c1c" -->
+<!-- .slide: style="text-align: center!important" class="has-dark-background" data-background-color="#1c1c1c" -->
 
 <img src="https://hydra.cc/img/logo.svg" width="10%" display="inline-block" style="margin-top:-8px; padding-right:5px;" align="center" ><a href="https://hydra.cc"><span style="line-height:2em; vertical-align:baseline; font-size:2.0em; font-weight:700; border-bottom: 2px solid #7AA5BC; color:#f5f6f7;">Hydra</span></a>
 
-- <span style="color:#7AA5BC; text-align:right;"> _A framework for elegantly configuring complex applications_</span>
+<span style="color:#7AA5BC; text-align:right;"> _A framework for elegantly configuring complex applications_</span>
 
-<div class="" style="position: absolute; left: 5%; top: 60%; height: 20%; width: 95%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+<div class="" style="position: absolute; left: 0%; top: 60%; height: 20%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
 
 
 <split even>
 
-**No boilerplate** <!-- .element: class="standout" -->
-**Powerful Configuration** <!-- .element: class="standout" -->
-**Pluggable Architecture** <!-- .element: class="standout" -->
+**No boilerplate** <!-- .element: style="background: #7AA5BC; color: #303030" class="standout" -->
+**Powerful Configuration** <!-- .element: style="background: #7AA5BC; color: #303030" class="standout" -->
+**Pluggable Architecture** <!-- .element: style="background: #7AA5BC; color: #303030" class="standout" -->
 </split>
 </div>
 
@@ -332,17 +323,18 @@
 
 # Simple Example
 
-```
-import hydra  
-from omegaconf import DictConfig, OmegaConf  
+- We include below a simple example that simply prints the configuration it receives.
+  ```python
+  import hydra  
+  from omegaconf import DictConfig, OmegaConf  
+
+  @hydra.main(version_base=None)  
+  def main(cfg: DictConfig) -> None:  
+	  print(OmegaConf.to_yaml(cfg))  
   
-@hydra.main(version_base=None)  
-def main(cfg: DictConfig) -> None:  
-	print(OmegaConf.to_yaml(cfg))  
-  
-if __name__ == "__main__":  
-	main()
-```
+  if __name__ == "__main__":  
+	  main()
+  ```
 
 - You can add config values via the command line (the `+` indicates that the field is new)
   ```shell
@@ -409,49 +401,11 @@ if __name__ == "__main__":
 
 
 
-<!-- .slide: class="has-dark-background" data-background-color="#1c1c1c" -->
-
-## Type-Safe Configs≤
-
-We can define a `_target_` field in our configuration that will tell Hydra what to look for when instantiating
-
-
-</div>
-
-<div class="" style="position: absolute; left: 0%; top: 92%; height: 8%; width: 100%; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end" align="right">
-
-<img src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/Argonne_cmyk_white.svg" alt="Argonne National Laboratory">
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" 100%;text-align:left;line-height:1.5em;"="true" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-<div class="" style="border-left: 0px solid #00CCFF; top: 0!important; width: 98%!important; text-align: left; margin: auto; padding: auto; padding-left: 2%" drag="100 100">
-
-
-
-<!-- .slide: -align:left!important;"="true" -->
-
-<img src="https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png" alt="WandB|450" style="width: 450px; object-fit: fill">
-
-<span style="font-size:0.8em;">_Weights &amp; Biases is the machine learning platform for developers to build better models faster_</span>
-
-
-</div>
-
-<div class="" style="position: absolute; left: 0%; top: 92%; height: 8%; width: 100%; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end" align="right">
-
-<img src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/Argonne_cmyk_white.svg" alt="Argonne National Laboratory">
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" 100%;text-align:left;line-height:1.5em;"="true" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-<div class="" style="border-left: 0px solid #00CCFF; top: 0!important; width: 98%!important; text-align: left; margin: auto; padding: auto; padding-left: 2%" drag="100 100">
-
-
-
 <!-- .slide: align:left!important;"="true" -->
 
 <img src="https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png" alt="WandB|450" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 450px; object-fit: fill">
+
+_W&amp;B is the machine learning platform for developers to build better models faster_
 
 - [Experiment tracking](https://docs.wandb.ai/guides/track): Visualize experiments in real time
 - [Hyperparameter Tuning](https://docs.wandb.ai/guides/sweeps): Optimize models quickly

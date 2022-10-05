@@ -60,6 +60,32 @@ date modified: Wednesday, September 21st 2022, 9:18:51 pm
 	  outdir = Path(os.getcwd()).joinpath(tstamp)
 	  ```
 
+
+note: MOTIVATIONS
+- Motivate need for experiment management
+	- Running experiments
+	- Consistent locations
+- CPU Only?
+- `1` GPU?
+- `>1` GPU?
+	- Independent workers or communication?
+		- How do you handle communication?
+	- Do you use distributed training?
+		- Specific software / framework?
+		- How do you launch your application?
+
+- How do you specify the details / configuration of the experiment?
+	- Directly from the commandline? (`sys.argv`, `ArgumentParser()`, etc.)
+	- Environment variables?
+	- Configuration files?
+	- Additional software / Libraries?
+	- How do you ensure the options you specify are the ones being used?
+- How do you measure model performance?
+	- Manually?
+	- Other software?
+	- How do you keep track of changes to the experiment?
+	- Aggregation tools?
+
 ---
 
 <!-- .slide template="[[template]]" bg="#1c1c1c" -->
@@ -88,51 +114,19 @@ date modified: Wednesday, September 21st 2022, 9:18:51 pm
 
 ---
 
-<!-- .slide template="[[template]]" bg="#1c1c1c" -->
-
-- Motivate need for experiment management
-	- Running experiments
-	- Consistent locations
-- CPU Only?
-- `1` GPU?
-- `>1` GPU?
-	- Independent workers or communication?
-		- How do you handle communication?
-	- Do you use distributed training?
-		- Specific software / framework?
-		- How do you launch your application?
-
----
-
-<!-- .slide template="[[template]]" bg="#1c1c1c" -->
-
-- How do you specify the details / configuration of the experiment?
-	- Directly from the commandline? (`sys.argv`, `ArgumentParser()`, etc.)
-	- Environment variables?
-	- Configuration files?
-	- Additional software / Libraries?
-	- How do you ensure the options you specify are the ones being used?
-- How do you measure model performance?
-	- Manually?
-	- Other software?
-	- How do you keep track of changes to the experiment?
-	- Aggregation tools?
-
----
-
-<!-- .slide template="[[template]]" bg="#1c1c1c" -->
+<!-- .slide template="[[template]]" bg="#1c1c1c" style="text-align:center!important;"-->
 
 <img src="https://hydra.cc/img/logo.svg" width="10%" display="inline-block" style="margin-top:-8px; padding-right:5px;" align="center" ><a href="https://hydra.cc"><span style="line-height:2em; vertical-align:baseline; font-size:2.0em; font-weight:700; border-bottom: 2px solid #7AA5BC; color:#f5f6f7;">Hydra</span></a>
 
-- <span style="color:#7AA5BC; text-align:right;"> _A framework for elegantly configuring complex applications_</span>
+<span style="color:#7AA5BC; text-align:right;"> _A framework for elegantly configuring complex applications_</span>
 
-<grid drop="5 60" drag="95 20" align="left">
+<grid drop="0 60" drag="100 20" align="left">
 
 <split even>
 
-**No boilerplate** <!-- .element class="standout" -->
-**Powerful Configuration** <!-- .element class="standout" -->
-**Pluggable Architecture** <!-- .element class="standout" -->
+**No boilerplate** <!-- .element class="standout" style="background:#7AA5BC; color:#303030;" -->
+**Powerful Configuration** <!-- .element class="standout" style="background:#7AA5BC; color:#303030;" -->
+**Pluggable Architecture** <!-- .element class="standout" style="background:#7AA5BC; color:#303030;" -->
 </split>
 </grid>
 
@@ -171,17 +165,18 @@ date modified: Wednesday, September 21st 2022, 9:18:51 pm
 
 # Simple Example
 
-```
-import hydra  
-from omegaconf import DictConfig, OmegaConf  
+- We include below a simple example that simply prints the configuration it receives.
+  ```python
+  import hydra  
+  from omegaconf import DictConfig, OmegaConf  
+
+  @hydra.main(version_base=None)  
+  def main(cfg: DictConfig) -> None:  
+	  print(OmegaConf.to_yaml(cfg))  
   
-@hydra.main(version_base=None)  
-def main(cfg: DictConfig) -> None:  
-	print(OmegaConf.to_yaml(cfg))  
-  
-if __name__ == "__main__":  
-	main()
-```
+  if __name__ == "__main__":  
+	  main()
+  ```
 
 - You can add config values via the command line (the `+` indicates that the field is new)
   ```shell
@@ -224,25 +219,11 @@ if __name__ == "__main__":
 
 ---
 
-<!-- .slide template="[[template]]" bg="#1c1c1c" -->
-
-## Type-Safe Configs≤
-
-We can define a `_target_` field in our configuration that will tell Hydra what to look for when instantiating
-
----
-
-<!-- .slide template="[[template]]" -align:left!important;" -->
-
-![WandB|450](https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png)
-
-<span style="font-size:0.8em;">_Weights &amp; Biases is the machine learning platform for developers to build better models faster_</span>
-
----
-
 <!-- .slide template="[[template]]" align:left!important;" -->
 
 ![WandB|450](https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png) <!-- .element align="top" -->
+
+_W&amp;B is the machine learning platform for developers to build better models faster_
 
 - [Experiment tracking](https://docs.wandb.ai/guides/track): Visualize experiments in real time
 - [Hyperparameter Tuning](https://docs.wandb.ai/guides/sweeps): Optimize models quickly
@@ -283,7 +264,7 @@ We can define a `_target_` field in our configuration that will tell Hydra what 
 
 <!-- .slide template="[[template]]" align:left!important;" -->
 
-<grid drag="25 15" drop="bottomleft">
+<grid drag="20 15" drop="topleft">
 
 ![WandB](https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png) <!-- .element align="topleft" -->
 </grid>
@@ -303,9 +284,7 @@ We can define a `_target_` field in our configuration that will tell Hydra what 
 ![WandB](https://raw.githubusercontent.com/wandb/wandb/master/.github/wb-logo-darkbg.png) <!-- .element align="topleft" -->
 </grid>
 
-<img src="./assets/sweep.svg" width=90%>
-
----
+<img src="./assets/wbsweep.svg" width=90%>
 
 ---
 
