@@ -203,23 +203,23 @@
 
 - Start by requesting an interactive job:
 
-- **Polaris**:
-  ```
-  qsub -A SDL_WORKSHOP -q "prod" \
-      -l select=32 \
-	  -l walltime=12:00:00 \
-	  -l filesystems=eagle:home:grand \
-	  -I
-  ```
+	- **Polaris**:
+	  ```
+	  qsub -A SDL_WORKSHOP -q "prod" \
+	      -l select=32 \
+		  -l walltime=12:00:00 \
+		  -l filesystems=eagle:home:grand \
+		  -I
+	  ```
 
-- **ThetaGPU**:
-  ```
-  qsub -A SDL_WORKSHOP -q "default" \
-	  -n=1 \
-	  -t=01:00 \
-	  --attrs="filesystems=home,eagle,grand,theta-fs0" \
-	  -I
-  ```
+	- **ThetaGPU**:
+	  ```
+	  qsub -A SDL_WORKSHOP -q "default" \
+		  -n=1 \
+		  -t=01:00 \
+		  --attrs="filesystems=home,eagle,grand,theta-fs0" \
+		  -I
+	  ```
 
 
 </div>
